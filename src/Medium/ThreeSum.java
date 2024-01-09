@@ -5,7 +5,7 @@
 //    public static List<List<Integer>> threeSum(int[] nums) {
 //
 //
-//      Solve it on leet code
+//      Solve it on  leet code
 //
 //    }
 //
