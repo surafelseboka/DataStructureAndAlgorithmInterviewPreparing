@@ -6,6 +6,10 @@ public class Main {
     public static void main(String[] args) {
 
        LinkedList list = new LinkedList();
+
+
+
+
        list.insertedHead(5);
        list.insertedHead(10);
        list.insertedHead(15);
