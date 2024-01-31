@@ -4,31 +4,30 @@ public class LongestRepeatingCharacterReplacement {
 
     public static int characterReplacement(String s, int k) {
 
-        int[] arr= new int[26];
-        int result =0;
-        int maxCount =0 ;
-        int left =0 ;
 
-        for (int right=0; right <s.length(); right++){
+        int[] charCount = new int[26];
+        int result = 0;
+        int left = 0;
+        int maxCount= 0;
 
-            arr[s.charAt(right) - 'A']++;
+        for(int right =0; right<s.length(); right++ ){
+            charCount[s.charAt(right) - 'A'] ++;
 
-            maxCount = Math.max(maxCount, arr[s.charAt(right) - 'A']);
+            maxCount = Math.max(maxCount, charCount[s.charAt(right) - 'A']);
 
-            int window = right - left + 1;
+            int windowSize = right - left + 1;
 
-            if (window- maxCount <= k){
-                result= window;
+            if(windowSize -maxCount <= k){
+                result = windowSize;
             } else {
-                arr[s.charAt(left) - 'A']--;
+                charCount[s.charAt(left) - 'A']--;
                 left++;
             }
-
         }
         return result;
     }
 
     public static void main(String[] args) {
-        System.out.println(characterReplacement("ABAB", 2));
+        System.out.println(characterReplacement("AABABBA", 1));
     }
 }
