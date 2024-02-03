@@ -58,12 +58,15 @@ public class TreeNode {
     public static List<Integer> inorderTraversal(TreeNode root){
 
         List<Integer> list = new ArrayList<>();
-        if (root == null) return list;
 
-        //Using stack
+        if(root == null){
+            return list;
+        }
+
         Stack<TreeNode> stack = new Stack<>();
 
         while (root != null || !stack.isEmpty()){
+
             while (root != null){
                 stack.push(root);
                 root = root.left;
@@ -78,15 +81,16 @@ public class TreeNode {
         return list;
     }
 
-
-
-
-
     public static void main(String[] args) {
 
-        TreeNode root = new TreeNode(2);
-        root.left = new TreeNode(1);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2 );
         root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.right.right = new TreeNode(6);
+        root.left.right = new TreeNode(5);
+
+
 //        root.left.left = new TreeNode(0);
 //        root.left.right = new  TreeNode(4);
 
