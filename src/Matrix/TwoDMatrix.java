@@ -2,7 +2,7 @@ package Matrix;
 
 public class TwoDMatrix {
 
-    public static void matrix(int[][] val){
+    public static void matrix(Character[][] val){
 
         for (int i=0; i < 3; i++){
             for (int j = 0; j < 4 ; j++) {
@@ -11,25 +11,30 @@ public class TwoDMatrix {
             System.out.println();
         }
 
-        System.out.println(val[0].length);
+       // System.out.println(val[0].length);
 
     }
 
     public static void main(String[] args) {
-        int[][] val = new int[3][4];
-        val[0][0] =  1;
-        val[0][1] =  3;
-        val[0][2] =  5;
-        val[0][3] =  7;
-        val[1][0] =  10;
-        val[1][1] =  11;
-        val[1][2] =  16;
-        val[1][3] =  20;
-        val[2][0] =  23;
-        val[2][1] =  30;
-        val[2][2] =  34;
-        val[2][3] =  60;
+        Character[][] val = new Character[3][4];
 
-         matrix(val);
+        int rows =  val.length;
+        int column = val[0].length;
+        val[0][0] =  'A';
+        val[0][1] =  'B';
+        val[0][2] =  'C';
+        val[0][3] =  'E';
+        val[1][0] =  'S';
+        val[1][1] =  'F';
+        val[1][2] =  'C';
+        val[1][3] =  'S';
+        val[2][0] =  'A';
+        val[2][1] =  'D';
+        val[2][2] =  'E';
+        val[2][3] =  'E';
+
+//         matrix(val);
+        System.out.println(rows);
+        System.out.println(column);
     }
 }
