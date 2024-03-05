@@ -15,7 +15,8 @@ public class Fibonacci {
         int n = 7;
 //        System.out.println(fib(n));
 //        System.out.println(fibonacci(n));
-        System.out.println(bottomUp(n));
+        System.out.println(fib(n));
+        System.out.println(fibM(n, new long[n+1]));
 
     }
 
@@ -24,14 +25,11 @@ public class Fibonacci {
 
      */
     public static int fib(int n) {
-        int result;
-
-        if (n == 1 || n == 2) {
-            result = 1;
-        } else {
-            result = fib(n - 1) + fib(n - 2);
+        if (n <= 2) {
+            return 1;
         }
-        return result;
+
+        return fib(n-2) + fib(n-1);
     }
 
     /*

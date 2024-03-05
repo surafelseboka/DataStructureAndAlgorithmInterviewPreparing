@@ -11,7 +11,7 @@ public class IsPalindrome {
        String newString = "";
 
        for (char c: s.toCharArray()) {
-            if (Character.isDigit(c) || Character.isLetter(c)){
+            if (Character.isDigit(c) || Character.isLetter(c) || Character.isUpperCase(c)){
                 newString += c;
             }
        }

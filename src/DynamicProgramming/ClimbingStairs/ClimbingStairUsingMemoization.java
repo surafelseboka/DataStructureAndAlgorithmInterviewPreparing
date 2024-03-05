@@ -10,6 +10,8 @@ public class ClimbingStairUsingMemoization {
     public static int climbStairsHelper(int n){
         if(n <= 2){
             return n;
+
+            // Save the previous computed values in here
         } if(memo[n] != 0){
             return memo[n];
         }
