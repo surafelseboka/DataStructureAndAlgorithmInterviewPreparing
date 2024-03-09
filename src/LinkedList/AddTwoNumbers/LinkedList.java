@@ -69,9 +69,23 @@ public class LinkedList {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
+        // Create l1: 2 -> 4 -> 3
+        list.insert(2);
+        list.insert(4);
+        list.insert(3);
 
-        //Node l1 = new Node(2, new Node(4, new Node(3)));
+        // Create l2: 5 -> 6 -> 4
+        LinkedList list2 = new LinkedList();
+        list2.insert(5);
+        list2.insert(6);
+        list2.insert(4);
 
+        // Add the numbers
+        Node result = list.addTwoNumbers(list.head, list2.head);
 
+        // Print the result
+        LinkedList resultList = new LinkedList();
+        resultList.head = result;
+        resultList.printList(); // Output: 7 0 8
     }
 }

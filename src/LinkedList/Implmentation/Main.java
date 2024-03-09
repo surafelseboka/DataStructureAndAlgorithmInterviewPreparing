@@ -7,18 +7,14 @@ public class Main {
 
        LinkedList list = new LinkedList();
 
-
-
-
        list.insertedHead(5);
        list.insertedHead(10);
        list.insertedHead(15);
        list.insertedHead(20);
        list.insertedHead(25);
 
-        System.out.println(list.getValues());
+        System.out.println(list);
 
-        ArrayList list1 = new ArrayList();
 
     }
 }
